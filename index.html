@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ma petite app Ubuntu</title>
+</head>
+<body>
+    <h1>Salut ! 👋 Bienvenue dans mon app</h1>
+
+    <p>Entrez un nombre :</p>
+    <input type="number" id="userNumber">
+    <button onclick="showNumber()">Voir le nombre en lettres</button>
+
+    <p id="result"></p>
+
+    <script>
+        function showNumber() {
+            const num = document.getElementById('userNumber').value;
+            const numbers = ["zéro", "un", "deux", "trois", "quatre"];
+            if(num >= 0 && num < 5) {
+                document.getElementById('result').innerText = "Vous avez saisi : " + numbers[num];
+            } else {
+                document.getElementById('result').innerText = "Nombre invalide, choisissez 0 à 4";
+            }
+        }
+    </script>
+</body>
+</html>
